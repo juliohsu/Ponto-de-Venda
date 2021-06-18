@@ -36,7 +36,7 @@ Tenha um bom desempenho no seu comércio!
 
 # Instalação
 
-Requisito: nodejs, npm
+Requisito: nodejs, npm, electron
 
 
 1- Abra este arquivo em um editor e inicializa no terminal com "npm init".
