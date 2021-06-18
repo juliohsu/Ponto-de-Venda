@@ -33,3 +33,20 @@ Senha: "123456"
 
 
 Tenha um bom desempenho no seu comércio!
+
+# Instalação
+
+Requisito: nodejs, npm
+
+
+1- Abra este arquivo em um editor e inicializa no terminal com "npm init".
+
+
+2- Depois, de acordo com o sistema operacional do seu sistema, escolhe entre uma opção dos códigos a seguir:
+```
+Mac - npm run package-mac
+Windows - npm run package-win
+Linux - npm run package-linux
+```
+
+3- Logo, irá criar um arquivo com o nome correspondente ao seu sistema oprecional, no qual existe o aplicativo desejado.
