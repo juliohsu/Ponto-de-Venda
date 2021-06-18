@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="../bootstrap.min.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 82vh;
+      }
+      #content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20vw;
+        margin-top: 10vh;
+      }
+      #carrinho {
+        height: 33vh;
+        overflow: auto;
+      }
+      #total {
+        height: 3vh;
+        border:1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #produtos-div {
+        height: 40vh;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg d-flex" style="justify-content: space-around;">
+        <img src="../assets/kroissant_icon_v3.png" width="200px">
+        <h1 style="font-size: 2rem;">registro de venda</h1>
+        <h2 style="font-size: 1rem;border:1px solid black;padding-left: 1rem;">Data/Horário: 
+          <span id="datetime"></span>
+          <button class="btn btn-primary btn-sm" id="btn-sair" type="button">Sair</button>
+        </h2>
+    </nav>
+    <div class="container text-center">
+      <div id="content">
+          <ul class="list-group">
+            <h2>Compras</h2>
+            <div id="resultadoCompra"></div>
+            <div id="carrinho"></div>
+            <div id="total">Total : <span><span id="precoTotal">0</span>  R$</span></div>
+
+            <fieldset class="form-group">
+              <legend class="mt-4">Pagamento</legend>
+
+              <div class="form-group d-flex flex-row align-items-center" >
+                <input id="valorPago" type="text" class="form-control my-2" placeholder="Insira o valor a ser pago">
+                <label for="valorPago">R$</label>
+              </div>
+
+              <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="option1" value="Dinheiro" checked="">
+                Dinheiro
+              </label>
+
+              <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="option2" value="Cartão Débito">
+                Cartão Débito
+              </label>
+
+              <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="option3" value="Cartão Crédito">
+                Cartão Crédito
+              </label>
+            </fieldset>
+            
+            <button class="btn btn-danger mt-2" id="btn-Finalizar" onclick="finalizar()">Finalizar Venda</button>
+            <button class="btn btn-primary mt-2" onclick="limpar()" >Limpar Carrinho</button>
+          </ul>
+  
+          <div class="list-group">
+            <h2>Selecione os produtos</h2>
+            <div class="form-group mb-3">
+              <label class="col-form-label mt-4" for="inputDefault">Pesquise os produtos</label>
+              <input type="text" class="form-control" placeholder="Insira nome do produto" id="pesquisa">
+
+            </div>
+            <div id="produtos-div">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                  </tr>
+                </thead>
+                <tbody id="produtos">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+      </div>
+
+      <footer>
+        <small>
+          &copy; Kroissant, 2021. Made by Julio Hsu. Private Software.
+        </small>
+      </footer>
+
+    </div>
+    <script src="./dados.js"></script>
+    <script src="./Compra.js"></script>
+    <script src="./mainPage.js"></script>
+  </body>
+</html>

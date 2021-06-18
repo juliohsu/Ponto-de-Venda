@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registro de venda - Login</title>
+    <link rel="stylesheet" href="../bootstrap.min.css" />
+  </head>
+  <body>
+    <div
+      class="container text-center d-flex flex-column"
+      style="
+        height: 80vh;
+        width: 25vw;
+        justify-content: space-between;
+        margin-top: 17vh;
+      "
+    >
+      <form>
+        <fieldset>
+          <legend class="mb-4">Entrar</legend>
+          <div id="notificacao"> 
+          </div>
+          <div class="form-group mb-4">
+            <label for="exampleInputEmail1" class="form-label mt-4"
+              >Nome do usuário</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              placeholder="Insira seu nome"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4"
+              >Senha do usuário</label
+            >
+
+            <input
+              type="password"
+              class="form-control"
+              id="senha"
+              placeholder="Insira sua senha"
+            />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary mt-5">Submit</button>
+      </form>
+      <footer>
+        <small>
+          &copy; Kroissant, 2021. Made by Julio Hsu. Private Software.
+        </small>
+      </footer>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
